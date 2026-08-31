@@ -1,0 +1,4 @@
+*.asv
+*.fig
+slprj/
+figures/*.png
