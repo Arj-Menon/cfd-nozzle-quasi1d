@@ -18,7 +18,7 @@ function A = areaAt(x)
 % Forward law, works on a single x or a while array of them.
 theta = (0.2 .* x -1).* pi;
 A = zeros(size(x)); % Making Matlab make the array containing x elemts and assigning 0 value to each.
-conv = (x<5); % true when we are upstream of the throat 
+conv = (x<5); % true when we are upstream of the throat; conv function takes the values in the matrix true to the condition.
 A(conv) = 1.75 - 0.75 .* cos(theta(conv));
 A(~conv) = 1.25 - 0.25 .* cos(theta(~conv));
 end 
